@@ -1,3 +1,4 @@
+import NavigationMenu from '@/components/NavigationMenu'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +13,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className='fixed top-4 left-4'>
+          <NavigationMenu />
+        </div>
+        {children}
+
+      </body>
     </html>
   )
 }
